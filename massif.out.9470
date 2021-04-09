@@ -1,0 +1,556 @@
+desc: (none)
+cmd: ./hash_table
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=6749713
+mem_heap_B=21932238
+mem_heap_extra_B=2170
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=18072554
+mem_heap_B=23576438
+mem_heap_extra_B=2186
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=24217926
+mem_heap_B=23846542
+mem_heap_extra_B=59618
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=27463309
+mem_heap_B=24102542
+mem_heap_extra_B=123634
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=31708813
+mem_heap_B=24441742
+mem_heap_extra_B=208434
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=34764023
+mem_heap_B=24684942
+mem_heap_extra_B=269234
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=38848584
+mem_heap_B=25016142
+mem_heap_extra_B=352034
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=44036992
+mem_heap_B=25579142
+mem_heap_extra_B=482442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=50860242
+mem_heap_B=26470342
+mem_heap_extra_B=705242
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=56424818
+mem_heap_B=27046718
+mem_heap_extra_B=849234
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=59648976
+mem_heap_B=27430910
+mem_heap_extra_B=945282
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=63928960
+mem_heap_B=27940958
+mem_heap_extra_B=1072794
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=66708704
+mem_heap_B=28272158
+mem_heap_extra_B=1155594
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=71587489
+mem_heap_B=28646742
+mem_heap_extra_B=1249138
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=75099027
+mem_heap_B=28829494
+mem_heap_extra_B=1294826
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=80341641
+mem_heap_B=29085750
+mem_heap_extra_B=1358890
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=83073875
+mem_heap_B=29229046
+mem_heap_extra_B=1394714
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=88819375
+mem_heap_B=29515254
+mem_heap_extra_B=1466266
+mem_stacks_B=0
+heap_tree=detailed
+n5: 29515254 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20211600 0x1098AF: readToStorage(char const*, char**) (IsE_LinesF.cpp:34)
+  n1: 20211600 0x109D3F: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:8)
+   n0: 20211600 0x10946B: main (main.cpp:20)
+ n1: 5855904 0x10A460: InsertBegin(List*, IsE_Pair<char*, char*>) (List_Pointer.cpp:109)
+  n2: 5855904 0x10B154: IsE_Hash_Table::InsertToHashTable(IsE_Pair<char*, char*>) (IsE_Hash_Table.cpp:26)
+   n3: 4211712 0x10B641: CreateNewAnaliticPicture(HashTableData const&, IsE_Vocabulary&) (laba1.cpp:111)
+    n0: 1644192 0x109569: main (main.cpp:31)
+    n0: 1644192 0x1095AF: main (main.cpp:32)
+    n0: 923328 0x1095F5: main (main.cpp:33)
+   n0: 1644192 0x1094D9: main (main.cpp:25)
+ n1: 1644200 0x109E14: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:22)
+  n0: 1644200 0x10946B: main (main.cpp:20)
+ n1: 1644192 0x109C16: splitTextIntoLines(char const*, int, Text*) (IsE_LinesF.cpp:135)
+  n1: 1644192 0x109DB4: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:17)
+   n0: 1644192 0x10946B: main (main.cpp:20)
+ n0: 159358 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=93563541
+mem_heap_B=29753302
+mem_heap_extra_B=1525778
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=98029231
+mem_heap_B=29987414
+mem_heap_extra_B=1584306
+mem_stacks_B=0
+heap_tree=detailed
+n5: 29987414 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20211600 0x1098AF: readToStorage(char const*, char**) (IsE_LinesF.cpp:34)
+  n1: 20211600 0x109D3F: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:8)
+   n0: 20211600 0x10946B: main (main.cpp:20)
+ n1: 6328064 0x10A460: InsertBegin(List*, IsE_Pair<char*, char*>) (List_Pointer.cpp:109)
+  n2: 6328064 0x10B154: IsE_Hash_Table::InsertToHashTable(IsE_Pair<char*, char*>) (IsE_Hash_Table.cpp:26)
+   n3: 4683872 0x10B641: CreateNewAnaliticPicture(HashTableData const&, IsE_Vocabulary&) (laba1.cpp:111)
+    n0: 1644192 0x109569: main (main.cpp:31)
+    n0: 1644192 0x1095AF: main (main.cpp:32)
+    n0: 1395488 0x1095F5: main (main.cpp:33)
+   n0: 1644192 0x1094D9: main (main.cpp:25)
+ n1: 1644200 0x109E14: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:22)
+  n0: 1644200 0x10946B: main (main.cpp:20)
+ n1: 1644192 0x109C16: splitTextIntoLines(char const*, int, Text*) (IsE_LinesF.cpp:135)
+  n1: 1644192 0x109DB4: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:17)
+   n0: 1644192 0x10946B: main (main.cpp:20)
+ n0: 159358 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=101601991
+mem_heap_B=30171446
+mem_heap_extra_B=1630314
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=105612114
+mem_heap_B=30320014
+mem_heap_extra_B=1667354
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=110972422
+mem_heap_B=30576974
+mem_heap_extra_B=1731594
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=115438563
+mem_heap_B=30790126
+mem_heap_extra_B=1784882
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=119011339
+mem_heap_B=30962094
+mem_heap_extra_B=1827874
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=123478266
+mem_heap_B=31179406
+mem_heap_extra_B=1882202
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=127944590
+mem_heap_B=31393070
+mem_heap_extra_B=1935618
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=131518077
+mem_heap_B=31573582
+mem_heap_extra_B=1980746
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=136831493
+mem_heap_B=31834510
+mem_heap_extra_B=2045978
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=140469545
+mem_heap_B=32099110
+mem_heap_extra_B=2112026
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=143948808
+mem_heap_B=32549862
+mem_heap_extra_B=2224714
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=149167701
+mem_heap_B=33225990
+mem_heap_extra_B=2393746
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=154243670
+mem_heap_B=33603198
+mem_heap_extra_B=2487946
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=159463282
+mem_heap_B=33843390
+mem_heap_extra_B=2547994
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=162943490
+mem_heap_B=34001758
+mem_heap_extra_B=2587586
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=169902570
+mem_heap_B=34323422
+mem_heap_extra_B=2668002
+mem_stacks_B=0
+heap_tree=detailed
+n5: 34323422 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20211600 0x1098AF: readToStorage(char const*, char**) (IsE_LinesF.cpp:34)
+  n1: 20211600 0x109D3F: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:8)
+   n0: 20211600 0x10946B: main (main.cpp:20)
+ n1: 10662656 0x10A460: InsertBegin(List*, IsE_Pair<char*, char*>) (List_Pointer.cpp:109)
+  n2: 10662656 0x10B154: IsE_Hash_Table::InsertToHashTable(IsE_Pair<char*, char*>) (IsE_Hash_Table.cpp:26)
+   n6: 9018464 0x10B641: CreateNewAnaliticPicture(HashTableData const&, IsE_Vocabulary&) (laba1.cpp:111)
+    n0: 1644192 0x109569: main (main.cpp:31)
+    n0: 1644192 0x1095AF: main (main.cpp:32)
+    n0: 1644192 0x1095F5: main (main.cpp:33)
+    n0: 1644192 0x10963B: main (main.cpp:34)
+    n0: 1644192 0x109681: main (main.cpp:35)
+    n0: 797504 0x1096C7: main (main.cpp:36)
+   n0: 1644192 0x1094D9: main (main.cpp:25)
+ n1: 1644200 0x109E14: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:22)
+  n0: 1644200 0x10946B: main (main.cpp:20)
+ n1: 1644192 0x109C16: splitTextIntoLines(char const*, int, Text*) (IsE_LinesF.cpp:135)
+  n1: 1644192 0x109DB4: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:17)
+   n0: 1644192 0x10946B: main (main.cpp:20)
+ n0: 160774 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=175121802
+mem_heap_B=34562782
+mem_heap_extra_B=2727842
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=178601438
+mem_heap_B=34727230
+mem_heap_extra_B=2768954
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=182080938
+mem_heap_B=34895998
+mem_heap_extra_B=2811146
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=188861324
+mem_heap_B=35174678
+mem_heap_extra_B=2879698
+mem_stacks_B=0
+heap_tree=detailed
+n5: 35174678 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20211600 0x1098AF: readToStorage(char const*, char**) (IsE_LinesF.cpp:34)
+  n1: 20211600 0x109D3F: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:8)
+   n0: 20211600 0x10946B: main (main.cpp:20)
+ n1: 11509344 0x10A460: InsertBegin(List*, IsE_Pair<char*, char*>) (List_Pointer.cpp:109)
+  n2: 11509344 0x10B154: IsE_Hash_Table::InsertToHashTable(IsE_Pair<char*, char*>) (IsE_Hash_Table.cpp:26)
+   n6: 9865152 0x10B641: CreateNewAnaliticPicture(HashTableData const&, IsE_Vocabulary&) (laba1.cpp:111)
+    n0: 1644192 0x109569: main (main.cpp:31)
+    n0: 1644192 0x1095AF: main (main.cpp:32)
+    n0: 1644192 0x1095F5: main (main.cpp:33)
+    n0: 1644192 0x10963B: main (main.cpp:34)
+    n0: 1644192 0x109681: main (main.cpp:35)
+    n0: 1644192 0x1096C7: main (main.cpp:36)
+   n0: 1644192 0x1094D9: main (main.cpp:25)
+ n1: 1644200 0x109E14: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:22)
+  n0: 1644200 0x10946B: main (main.cpp:20)
+ n1: 1644192 0x109C16: splitTextIntoLines(char const*, int, Text*) (IsE_LinesF.cpp:135)
+  n1: 1644192 0x109DB4: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:17)
+   n0: 1644192 0x10946B: main (main.cpp:20)
+ n0: 165342 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=192341210
+mem_heap_B=35327318
+mem_heap_extra_B=2918874
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=195820670
+mem_heap_B=35484470
+mem_heap_extra_B=2958162
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=199300795
+mem_heap_B=35639990
+mem_heap_extra_B=2997042
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=202780220
+mem_heap_B=35803798
+mem_heap_extra_B=3037994
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=206260253
+mem_heap_B=35957462
+mem_heap_extra_B=3076410
+mem_stacks_B=0
+heap_tree=detailed
+n5: 35957462 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20211600 0x1098AF: readToStorage(char const*, char**) (IsE_LinesF.cpp:34)
+  n1: 20211600 0x109D3F: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:8)
+   n0: 20211600 0x10946B: main (main.cpp:20)
+ n1: 12296224 0x10A460: InsertBegin(List*, IsE_Pair<char*, char*>) (List_Pointer.cpp:109)
+  n2: 12296224 0x10B154: IsE_Hash_Table::InsertToHashTable(IsE_Pair<char*, char*>) (IsE_Hash_Table.cpp:26)
+   n7: 10652032 0x10B641: CreateNewAnaliticPicture(HashTableData const&, IsE_Vocabulary&) (laba1.cpp:111)
+    n0: 1644192 0x109569: main (main.cpp:31)
+    n0: 1644192 0x1095AF: main (main.cpp:32)
+    n0: 1644192 0x1095F5: main (main.cpp:33)
+    n0: 1644192 0x10963B: main (main.cpp:34)
+    n0: 1644192 0x109681: main (main.cpp:35)
+    n0: 1644192 0x1096C7: main (main.cpp:36)
+    n0: 786880 0x10970D: main (main.cpp:37)
+   n0: 1644192 0x1094D9: main (main.cpp:25)
+ n1: 1644200 0x109E14: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:22)
+  n0: 1644200 0x10946B: main (main.cpp:20)
+ n1: 1644192 0x109C16: splitTextIntoLines(char const*, int, Text*) (IsE_LinesF.cpp:135)
+  n1: 1644192 0x109DB4: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:17)
+   n0: 1644192 0x10946B: main (main.cpp:20)
+ n0: 161246 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=211479886
+mem_heap_B=36195894
+mem_heap_extra_B=3136018
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=214959116
+mem_heap_B=36354774
+mem_heap_extra_B=3175738
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=218439012
+mem_heap_B=36521526
+mem_heap_extra_B=3217426
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=221918268
+mem_heap_B=36684790
+mem_heap_extra_B=3258242
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=224650687
+mem_heap_B=36814102
+mem_heap_extra_B=3290570
+mem_stacks_B=0
+heap_tree=detailed
+n5: 36814102 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20211600 0x1098AF: readToStorage(char const*, char**) (IsE_LinesF.cpp:34)
+  n1: 20211600 0x109D3F: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:8)
+   n0: 20211600 0x10946B: main (main.cpp:20)
+ n1: 13152864 0x10A460: InsertBegin(List*, IsE_Pair<char*, char*>) (List_Pointer.cpp:109)
+  n2: 13152864 0x10B154: IsE_Hash_Table::InsertToHashTable(IsE_Pair<char*, char*>) (IsE_Hash_Table.cpp:26)
+   n7: 11508672 0x10B641: CreateNewAnaliticPicture(HashTableData const&, IsE_Vocabulary&) (laba1.cpp:111)
+    n0: 1644192 0x109569: main (main.cpp:31)
+    n0: 1644192 0x1095AF: main (main.cpp:32)
+    n0: 1644192 0x1095F5: main (main.cpp:33)
+    n0: 1644192 0x10963B: main (main.cpp:34)
+    n0: 1644192 0x109681: main (main.cpp:35)
+    n0: 1644192 0x1096C7: main (main.cpp:36)
+    n0: 1643520 0x10970D: main (main.cpp:37)
+   n0: 1644192 0x1094D9: main (main.cpp:25)
+ n1: 1644200 0x109E14: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:22)
+  n0: 1644200 0x10946B: main (main.cpp:20)
+ n1: 1644192 0x109C16: splitTextIntoLines(char const*, int, Text*) (IsE_LinesF.cpp:135)
+  n1: 1644192 0x109DB4: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:17)
+   n0: 1644192 0x10946B: main (main.cpp:20)
+ n0: 161246 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=225710633
+mem_heap_B=36819342
+mem_heap_extra_B=3290762
+mem_stacks_B=0
+heap_tree=peak
+n5: 36819342 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20211600 0x1098AF: readToStorage(char const*, char**) (IsE_LinesF.cpp:34)
+  n1: 20211600 0x109D3F: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:8)
+   n0: 20211600 0x10946B: main (main.cpp:20)
+ n1: 13153536 0x10A460: InsertBegin(List*, IsE_Pair<char*, char*>) (List_Pointer.cpp:109)
+  n2: 13153536 0x10B154: IsE_Hash_Table::InsertToHashTable(IsE_Pair<char*, char*>) (IsE_Hash_Table.cpp:26)
+   n7: 11509344 0x10B641: CreateNewAnaliticPicture(HashTableData const&, IsE_Vocabulary&) (laba1.cpp:111)
+    n0: 1644192 0x109569: main (main.cpp:31)
+    n0: 1644192 0x1095AF: main (main.cpp:32)
+    n0: 1644192 0x1095F5: main (main.cpp:33)
+    n0: 1644192 0x10963B: main (main.cpp:34)
+    n0: 1644192 0x109681: main (main.cpp:35)
+    n0: 1644192 0x1096C7: main (main.cpp:36)
+    n0: 1644192 0x10970D: main (main.cpp:37)
+   n0: 1644192 0x1094D9: main (main.cpp:25)
+ n1: 1644200 0x109E14: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:22)
+  n0: 1644200 0x10946B: main (main.cpp:20)
+ n1: 1644192 0x109C16: splitTextIntoLines(char const*, int, Text*) (IsE_LinesF.cpp:135)
+  n1: 1644192 0x109DB4: IsE_Vocabulary::IsE_Vocabulary(char const*) (IsE_Vocabulary.cpp:17)
+   n0: 1644192 0x10946B: main (main.cpp:20)
+ n0: 165814 in 8 places, all below massif's threshold (1.00%)
