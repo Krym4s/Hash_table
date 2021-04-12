@@ -46,7 +46,10 @@ As pictures and dispersions say the most effective are murmur and crc they have 
 
 ## Optimise our hash table
 
-To optimise our hash table we should get rid of our old code and replace it with assembler. Also we should set normal size for our hash table (we have about 50000 words, so the size of our table should be about 30000)
+To optimise our hash table we should get rid of our old code and replace it with assembler. Also we should set normal size for our hash table (we have about 50000 words, so the size of our table should be about 30000). As we want to optimise our code to release it, we should run our programm with -O3 flag. Also, to see weak places of our programm we should make a stress test for it. As our hash table is created to FIND words we should run finding function much times. In my case I look for every word of vocabulary 100 times (5 000 000 finds at all).
+
+### First step: rewrite crc
+We should watch on the procent of time that each function works.
 
 First of all, there is intrinsic function that count crc hash, so we can use it.
 
@@ -76,4 +79,4 @@ This is the first version of crc hash:
     }
 
 ```
-As we want to optimise 
+
