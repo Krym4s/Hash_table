@@ -24,9 +24,9 @@ To see colisions in more obvious way we should diminish size of hash table to ma
 
 1. Н = 1
 ![1](https://github.com/Krym4s/Hash_table/blob/main/1Pic "1")
-2. H = strlen (str)
+2. H = sum of letters
 ![2](https://github.com/Krym4s/Hash_table/blob/main/hash_table/lenPic "2")
-3. H = sum of letters
+3. H = strlen (str)
 ![3](https://github.com/Krym4s/Hash_table/blob/main/hash_table/sumPic "3")
 4. H = sum of letters devide strlen
 ![4](https://github.com/Krym4s/Hash_table/blob/main/hash_table/averageLenPic "4")
@@ -47,4 +47,29 @@ As pictures says the most effective are murmur and crc they have less colisiions
 
 To optimise our hash table we should get rid of our code!
 First of all, there is a magic intrinsic functions that are translated to sse assembler commands and one of them count the crc hash, that could safe as lots of time.
+
+``` 
+    const unsigned int tableSize = 256;
+    const unsigned int mask = 0x6C40DF5F0B497347; 
+    unsigned int table [tableSize];
+    unsigned int hash  = 0;
+
+    for (int i = 0; i < tableSize; i++)
+    {
+        hash = i;
+        for (int j = 0; j < 8; j++)
+            hash = hash & 1 ? (hash >> 1) ^ mask : hash >>  1;
+
+        table[i] = hash;
+    }
+
+    hash = 0xFFFFFFFFUL;
+
+    int strLen = strlen (value);
+    for (int symbN = 0; symbN < strLen; symbN++)
+    {
+        hash = table [(hash ^ *(value + symbN)) & 0xFF] ^ (hash >> 8);
+    }
+
+```
 
