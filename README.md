@@ -10,4 +10,4 @@ First of all we should choose which type of hash table we would write. For this 
 
 So, the structure of our project simplified will look in this way
 
-![текст](https://github.com/Krym4s/Hash_table/tree/main/hash_table/схема1.jpg "схема")
+![текст](https://github.com/Krym4s/Hash_table/blob/main/hash_table/%D1%81%D1%85%D0%B5%D0%BC%D0%B01.jpg "схема")
