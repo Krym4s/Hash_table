@@ -22,11 +22,11 @@ To write a good hash table I have to write good hash function. This function sho
 There are some naive ideas of hash functions that I've checked and compaired them with better hashes.
 To see colisions in more obvious way we should diminish size of hash table to make number of member in each list bigger. 
 
-1. Н = 1
+1. Н = 1 (dispersion: 0.9995)
 ![1](https://github.com/Krym4s/Hash_table/blob/main/1Pic "1")
-2. H = sum of letters
+2. H = sum of letters (dispersion: 0.285472)
 ![2](https://github.com/Krym4s/Hash_table/blob/main/hash_table/lenPic "2")
-3. H = strlen (str)
+3. H = strlen (str) (dispersion: 0.0238834)
 ![3](https://github.com/Krym4s/Hash_table/blob/main/hash_table/sumPic "3")
 4. H = sum of letters devide strlen
 ![4](https://github.com/Krym4s/Hash_table/blob/main/hash_table/averageLenPic "4")
@@ -47,6 +47,8 @@ As pictures says the most effective are murmur and crc they have less colisiions
 
 To optimise our hash table we should get rid of our code!
 First of all, there is a magic intrinsic functions that are translated to sse assembler commands and one of them count the crc hash, that could safe as lots of time.
+
+This is the first version of crc hash it have 
 
 ``` 
     const unsigned int tableSize = 256;
