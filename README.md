@@ -1,12 +1,12 @@
 # Hash_Table with optimization
-In this project I have made a hash table for english to russian vocabulary. 
+In this project I have made a hash table for English to Russian vocabulary. 
 There are two steps of this project: 
-1) Create Hash Table for fast word finding and translation into russian language
-2) Optimize code with using assembler and other methods
+1) Create Hash Table for fast word finding and translation into Russian language
+2) Optimize code using assembler and other methods
 
 ## Creating hash table
 
-First of all we should choose which type of hash table we would write. For this task I have chosen Separate chaining with linked lists because of easier choose of hash functions, but it is also perfect to use open addressing because our hash table is concieved with constant size.
+First of all, we should choose which type of hash table we would implement. For this task I have chosen Separate chaining with linked lists because ease choice of hash functions, but it is also perfect to use open addressing because our hash table is concieved with constant size.
 
 So, the  simplified structure of our project will look in this way:
 Words are contained in char buffer and are reffered with array of pairs (key - value, origin word - translation). Our hash Table contains buffer of Lists, which refers to pairs, each List have pairs with same hashsum of key word.   
