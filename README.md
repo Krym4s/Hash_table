@@ -46,4 +46,5 @@ As pictures says the most effective are murmur and crc they have less colisiions
 ## Optimise our hash table
 
 To optimise our hash table we should get rid of our code!
+First of all, there is a magic intrinsic functions that are translated to sse assembler commands and one of them count the crc hash, that could safe as lots of time.
 
