@@ -20,7 +20,7 @@ To write a good hash table I have to write good hash function. This function sho
 - Oh, I'm sorry, in previous two ppoints there must be must, not should.
 
 There are some naive ideas of hash functions that I've checked and compaired them with better hashes.
-To see 
+To see colisions in more obvious way we should diminish size of hash table to make number of member in each list bigger. 
 
 1. Н = 1
 ![1](https://github.com/Krym4s/Hash_table/blob/main/1Pic "1")
@@ -41,4 +41,6 @@ To see
 9. CRC
 ![9](https://github.com/Krym4s/Hash_table/blob/main/hash_table/CRCPic"9")
 
-As pictures says the most effective are murmur and crc they have less colisiions than other hash functions, so we would use them.
+As pictures says the most effective are murmur and crc they have less colisiions than other hash functions, so we would use them. I have chosen CRC. I will explain further, why I have done so.
+
+## Optimise our hash table
