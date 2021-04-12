@@ -44,3 +44,6 @@ To see colisions in more obvious way we should diminish size of hash table to ma
 As pictures says the most effective are murmur and crc they have less colisiions than other hash functions, so we would use them. I have chosen CRC. I will explain further, why I have done so.
 
 ## Optimise our hash table
+
+To optimise our hash table we should get rid of our code!
+
