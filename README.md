@@ -25,20 +25,36 @@ To see colisions in more obvious way we should diminish size of hash table to ma
 
 1. Н = 1 (dispersion: 0.9995)
 ![1](https://github.com/Krym4s/Hash_table/blob/main/1Pic "1")
+
+
 2. H = sum of letters (dispersion: 0.285472)
 ![2](https://github.com/Krym4s/Hash_table/blob/main/hash_table/lenPic "2")
+
+
 3. H = strlen (str) (dispersion: 0.0238834)
 ![3](https://github.com/Krym4s/Hash_table/blob/main/hash_table/sumPic "3")
+
+
 4. H = sum of letters devide strlen (dispersion: 0.252645)
 ![4](https://github.com/Krym4s/Hash_table/blob/main/hash_table/averageLenPic "4")
+
+
 5. H = str[0] (dispersion: 0.264585)
 ![5](https://github.com/Krym4s/Hash_table/blob/main/hash_table/dedPic "5") 
+
+
 6. Ror (dispersion: 0.00747365)
 ![6](https://github.com/Krym4s/Hash_table/blob/main/hash_table/RorPic "6") 
+
+
 7. Rol (dispersion: 0.0214088)
 ![7](https://github.com/Krym4s/Hash_table/blob/main/hash_table/RolPic "7")
+
+
 8. Murmur (dispersion: 0.00444014)
 ![8](https://github.com/Krym4s/Hash_table/blob/main/hash_table/murmurPic "8")
+
+
 9. CRC (dispersion: 0.00445683)
 ![9](https://github.com/Krym4s/Hash_table/blob/main/hash_table/CRCPic "9")
 
