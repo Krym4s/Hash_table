@@ -25,7 +25,7 @@ To see colisions in more obvious way we should diminish size of hash table to ma
 
 1. Н = 1 (dispersion: 0.9995)
 ![1](https://github.com/Krym4s/Hash_table/blob/main/1Pic "1")
-<img align="left" width="100" height="100" src="https://github.com/Krym4s/Hash_table/blob/main/1Pic">
+<img align="left"  src="https://github.com/Krym4s/Hash_table/blob/main/1Pic">
 
 
 2. H = sum of letters (dispersion: 0.285472)
