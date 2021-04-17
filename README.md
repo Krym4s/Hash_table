@@ -24,40 +24,39 @@ There are some ideas of hash functions that I've checked to see uneffective func
 To see colisions in more obvious way we should diminish size of hash table to make number of member in each list bigger. 
 
 1. Н = 1 (dispersion: 0.9995)
-![1](https://github.com/Krym4s/Hash_table/blob/main/1Pic "1")
 <img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/1Pic">
 
 
 2. H = sum of letters (dispersion: 0.285472)
-![2](https://github.com/Krym4s/Hash_table/blob/main/hash_table/lenPic "2")
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/lenPic">
 
 
 3. H = strlen (str) (dispersion: 0.0238834)
-![3](https://github.com/Krym4s/Hash_table/blob/main/hash_table/sumPic "3")
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/1Pic">
 
 
 4. H = sum of letters devide strlen (dispersion: 0.252645)
-![4](https://github.com/Krym4s/Hash_table/blob/main/hash_table/averageLenPic "4")
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/averageLenPic">
 
 
 5. H = str[0] (dispersion: 0.264585)
-![5](https://github.com/Krym4s/Hash_table/blob/main/hash_table/dedPic "5") 
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/dedPic">
 
 
 6. Ror (dispersion: 0.00747365)
-![6](https://github.com/Krym4s/Hash_table/blob/main/hash_table/RorPic "6") 
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/RorPic">
 
 
 7. Rol (dispersion: 0.0214088)
-![7](https://github.com/Krym4s/Hash_table/blob/main/hash_table/RolPic "7")
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/RolPic">
 
 
 8. Murmur (dispersion: 0.00444014)
-![8](https://github.com/Krym4s/Hash_table/blob/main/hash_table/murmurPic "8")
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/murmurPic">
 
 
 9. CRC (dispersion: 0.00445683)
-![9](https://github.com/Krym4s/Hash_table/blob/main/hash_table/CRCPic "9")
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/CRCPic">
 
 As pictures and dispersions say the most effective are murmur and crc they have less colisiions than other hash functions, so we would use them. I have chosen CRC. I will explain further, why I have done so.
 
