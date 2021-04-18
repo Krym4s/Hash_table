@@ -66,7 +66,7 @@ To optimise our hash table we should get rid of our old slow code and replace it
 
 ### First step: rewrite crc
 We should watch on the percent of time that each function works. 
-<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/1.jpg">
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/zero-opt.png">
 
 As we see crc hash occupies about 93 percents of runtime.
 
@@ -113,5 +113,106 @@ Here is rewritten version of crc hash using intrinsics:
 Avarage runtime without optimization is 2.503 seconds. Avavrage runtime with optimisation is 0.508 seconds, so gain in speed is 393 percents. 
 
 ### Second step 
+Let us see situation after first optimization
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/first-opt.png">
 
+As we can see our next problem function is \_\_strcmp\_avx2 . It takes much more time because size of string is unknown. Having analised our key-words I could say that it's length less than 32 characters (max length is 30 characters). It means that we can use ymm registers to compare our strings as \_\_strcmp\_avx2 does, but we need only one iteration of comparing. It means that we can exclude counting number of 32 byte blocks in our programm.
 
+I will not show you the original code of \_\_strcmp\_avx2 as you can find it in standart library. 
+
+My IsE_strcmp needs third argument (length of string)
+
+First attemp of rewriting:
+```
+global IsE_strcmp
+
+IsE_strcmp:
+vxorps ymm0, ymm0
+vxorps ymm1, ymm1
+
+vmovups ymm0, [rsi]
+vmovups ymm1, [rdi]
+
+vpcmpeqb ymm0, ymm1
+xor rcx, rcx
+vpmovmskb ecx, ymm0
+
+not ecx
+tzcnt ecx, ecx
+
+xor rax, rax
+test rcx, rdx
+
+jae Equal
+
+add rax, 1
+
+Equal:
+ret
+```
+It was even slower than standart strcmp because of unnecessary xors and assignments. Avarage runtime without optimization is 0.508 seconds. Avavrage runtime with optimisation is 0.632 seconds, so gain in speed is -19.6 percents.
+
+After some corrections:
+```
+IsE_strcmp:
+
+vmovups ymm0, [rsi]
+
+vpcmpeqb ymm0, [rdi]
+;xor rcx, rcx
+vpmovmskb ecx, ymm0
+
+not ecx
+tzcnt ecx, ecx
+
+xor rax, rax
+test rcx, rdx
+
+jae Equal
+
+add rax, 1
+
+Equal:
+ret
+```
+
+Avarage runtime without optimization is 0.508 seconds. Avavrage runtime with optimisation is 0.465 seconds, so gain in speed is 9.2 percents.
+
+### Estimating results
+After two optimisations we can see that only four functions can be optimised because other function's impact is less than 1 percent.
+
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/second-opt.png">
+
+Find_element: 
+```
+    unsigned int index = CountHash (key);
+    ListMember* answer = FindValue(vocabulary + (index % size), key);
+    if (!answer)
+    return nullptr;
+
+    return answer->value.second;
+```
+Find_value:
+```
+    int len = strlen (value);
+    ListMember* index = thou->first;
+    while (index)
+    {
+        int val = IsE_strcmp (value, index->value.first, len);
+        if (!val)
+            return index;
+
+        index = index->next;
+    }
+    return NULL;
+```
+These two functions mostly call other functions, so they can't be optimised. 
+getPair is simple getter so it is also can not be optimised.
+
+Main function is not related to hash table, so it is not important to optimise it.
+
+So, I think that it is time we stopped optimisation to save multiplatform.  
+
+In the end we have got 437 percent optimization.
+
+ 
