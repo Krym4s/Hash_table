@@ -11,7 +11,7 @@ First of all, we should choose which type of hash table we would implement. For 
 So, the  simplified structure of our project will look in this way:
 Words are contained in char buffer and are reffered with array of pairs (key - value, english word - russian translation). Our hash Table contains buffer of Lists, which refers to pairs, each List have pairs with same hashsum of key word.   
 
-![scheme](https://github.com/Krym4s/Hash_table/blob/main/hash_table/%D1%81%D1%85%D0%B5%D0%BC%D0%B01.jpg "схема")
+![scheme](https://github.com/Krym4s/Hash_table/blob/main/hash_table/%D0%BA%D1%83%D0%BB%D0%B0%D0%BA.png "схема")
 
 ### Choosing function
 
