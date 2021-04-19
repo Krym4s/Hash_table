@@ -209,7 +209,7 @@ Avarage runtime without optimization is 0.366 seconds. Avavrage runtime with opt
 ## Estimating results
 After three optimisations we can see that only four functions can be optimised because other function's impact is less than 1 percent.
 
-<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/second-opt.png">
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/four%20opt.png">
 
 Find_element: 
 ```
@@ -241,6 +241,6 @@ Main function is not related to hash table, so it is not important to optimise i
 
 So, I think that it is time we stopped optimisation to save multiplatform.  
 
-In the end we have got 437 percent optimization.
+In the end we have got 1213 percent optimization.
 
  
