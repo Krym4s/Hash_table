@@ -3,6 +3,7 @@
 #include "IsE_Vocabulary.hpp"
 #include "IsE_Hash_Table.hpp"
 #include "IsE_Pair.hpp"
+//#include "IsE_PairF.hpp"
 #include "IsE_LinesF.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,11 +17,11 @@ int main()
     setlocale (LC_ALL, "rus");
     //system ("gnuplot");
 
-
-    unsigned int maxwordLen = 0;
+    
+    //unsigned int maxwordLen = 0;
     IsE_Vocabulary vocabulary ("ENRUS.txt");
 
-    /*
+    /*   
     for (int i = 0; i < vocabulary.getSize(); i++)
     {
         unsigned int len = strlen(vocabulary.getPair(i).first);
@@ -30,8 +31,8 @@ int main()
         printf ("%s\n", vocabulary.getPair(i).first);
     }
     printf ("max len : %d\n", maxwordLen);
-    
-    
+    */
+    /*
     CreateNewAnaliticPicture ({1000, "logs", "1Dat", "1Pic",                   hash1},      vocabulary);
     CreateNewAnaliticPicture ({1000, "logs", "lenDat", "lenPic",               hash2},      vocabulary);
     CreateNewAnaliticPicture ({1000, "logs", "sumDat", "sumPic",               hash3},      vocabulary);
@@ -40,16 +41,17 @@ int main()
     CreateNewAnaliticPicture ({1000, "logs", "RorDat", "RorPic",               hashRor},    vocabulary);
     CreateNewAnaliticPicture ({1000, "logs", "RolDat", "RolPic",               hashRol},    vocabulary);
     CreateNewAnaliticPicture ({1000, "logs", "CRCDat", "CRCPic",               hashCRC},    vocabulary);
-    CreateNewAnaliticPicture ({1000, "logs", "MurmurDat", "MurmurPic",               hashMurMur}, vocabulary);
-
+    CreateNewAnaliticPicture ({1000, "logs", "MurmurDat", "MurmurPic",         hashMurMur}, vocabulary);
     */
+    
 
    //--------------------------------------------------------------------------------
-
+    
     IsE_Hash_Table table (30000, hashCRC, "logs.txt");
 
     unsigned int vocSize = vocabulary.getSize();
-
+    
+    //table.InsertToHashTable (vocabulary.getPair(0));
     for (unsigned int i = 0; i < vocSize; i++) //
         table.InsertToHashTable (vocabulary.getPair(i));
 
@@ -58,6 +60,9 @@ int main()
         for (unsigned int i = 0; i < vocSize; i++)
             table.FindElement(vocabulary.getPair(i).first);
 
+    printf ("%s\n", table.FindElement ("rat"));
+    
+    
     return 0;
 }
 
