@@ -28,11 +28,11 @@ To see colisions in more obvious way we should diminish size of hash table to ma
 
 
 2. H = sum of letters (dispersion: 0.285472)
-<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/lenPic">
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/sumPic">
 
 
 3. H = strlen (str) (dispersion: 0.0238834)
-<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/1Pic">
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/lenPic">
 
 
 4. H = sum of letters devide strlen (dispersion: 0.252645)
@@ -159,7 +159,6 @@ IsE_strcmp:
 vmovups ymm0, [rsi]
 
 vpcmpeqb ymm0, [rdi]
-;xor rcx, rcx
 vpmovmskb ecx, ymm0
 
 not ecx
@@ -178,8 +177,37 @@ ret
 
 Avarage runtime without optimization is 0.508 seconds. Avavrage runtime with optimisation is 0.465 seconds, so gain in speed is 9.2 percents.
 
-### Estimating results
-After two optimisations we can see that only four functions can be optimised because other function's impact is less than 1 percent.
+### Less length less time
+
+<img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/second-opt.png">
+
+As we estimated length of words in our vocabulary we can omit calculatung length of strings in hash function. So, if all bytes after word in 32 bytes was zero there would be no negative effect on finding words. So we can use crc not only with 8 characters but also with 64 bytes.
+
+First of all we should prepare 32 byte buffer for our key words:
+
+```
+        vocabulary[i].first  = (char*) calloc (32, sizeof(char));
+        
+        for (int j = 0; j < (lines.lines + 2 * i)->length; j++)
+        {
+            vocabulary[i].first[j] = (lines.lines + 2 * i)->line[j];
+        }
+```
+
+After that we can improve our crc function:
+
+```
+    unsigned int hash = 0;
+    for (int i = 0; i < 4; i++)
+        hash = _mm_crc32_u64 (hash, *(value + i));
+    return hash;
+
+```
+
+Avarage runtime without optimization is 0.366 seconds. Avavrage runtime with optimisation is 0.161 seconds, so gain in speed is 126 percents.
+
+## Estimating results
+After three optimisations we can see that only four functions can be optimised because other function's impact is less than 1 percent.
 
 <img align="center"  src="https://github.com/Krym4s/Hash_table/blob/main/hash_table/second-opt.png">
 
